@@ -3,8 +3,17 @@
   "version": "0.0.1",
   "license": "MIT",
   "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
   "scripts": {
     "postinstall": "tsc -p ."
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "react": "^16.2.0",
+    "tslint": "^5.9.1",
+    "typescript": "^2.7.2"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.3",
+    "@types/react": "^16.0.38"
   }
 }
