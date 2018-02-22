@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "esnext",
     "target": "esnext",
     "jsx": "react",
     "moduleResolution": "node",
@@ -21,8 +21,7 @@
     "declaration": true,
     "baseUrl": "./lib",
     "rootDirs": [".", "./lib"],
-    "plugins": [{ "name": "tslint-language-service" }],
-    "outDir": "./dist"
+    "plugins": [{ "name": "tslint-language-service" }]
   },
   "files": ["lib/index.ts"]
 }

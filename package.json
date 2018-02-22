@@ -2,17 +2,28 @@
   "name": "react-atoms",
   "version": "0.0.1",
   "license": "MIT",
-  "main": "dist/index.js",
+  "main": "dist/react-atoms.js",
+  "types": "dist/react-atoms.d.ts",
   "scripts": {
-    "postinstall": "tsc -p ."
+    "postinstall": "rimraf dist && webpack"
   },
   "dependencies": {
     "@types/classnames": "^2.2.3",
     "@types/react": "^16.0.38",
+    "@types/webpack": "^3.8.8",
     "classnames": "^2.2.5",
+    "css-loader": "^0.28.9",
+    "declaration-bundler-webpack-plugin": "^1.0.3",
+    "dtsbundler-webpack-plugin": "^1.0.0",
+    "node-sass": "^4.7.2",
     "react": "^16.2.0",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.20.2",
+    "ts-loader": "^3.5.0",
     "tslint": "^5.9.1",
-    "typescript": "^2.7.2"
+    "typescript": "^2.7.2",
+    "webpack": "^3.11.0"
   },
   "devDependencies": {}
 }
