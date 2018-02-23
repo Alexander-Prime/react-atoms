@@ -22,6 +22,5 @@
     "baseUrl": "./lib",
     "rootDirs": [".", "./lib"],
     "plugins": [{ "name": "tslint-language-service" }]
-  },
-  "files": ["lib/index.ts"]
+  }
 }

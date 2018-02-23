@@ -1,14 +1,14 @@
 import classNames from "classnames";
 import React from "react";
 
-import "./Card.scss";
+import s from "./Card.scss";
 
 interface CardAttributes extends JSX.ElementChildrenAttribute {
   className?: string;
 }
 
 const Card = (props: CardAttributes) => {
-  const className = classNames("reactAtoms-card", props.className);
+  const className = classNames(s.card, props.className);
   return <div className={className}>{props.children}</div>;
 };
 

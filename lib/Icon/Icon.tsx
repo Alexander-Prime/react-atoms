@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import React from "react";
 
-import "./Icon.scss";
+import s from "./Icon.scss";
 
 type IconCommonAttributes = {
   className?: string;
@@ -18,7 +18,7 @@ interface IconSrcAttributes extends IconCommonAttributes {
 }
 
 const Icon = (props: IconNameAttributes | IconSrcAttributes) => {
-  const className = classNames("reactAtoms-icon", props.className);
+  const className = classNames(s.icon, props.className);
   if (typeof props.name === "undefined") {
     return <img className={className} src={props.src} />;
   } else {

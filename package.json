@@ -5,7 +5,7 @@
   "main": "dist/react-atoms.js",
   "types": "dist/react-atoms.d.ts",
   "scripts": {
-    "postinstall": "npm build",
+    "postinstall": "npm run build",
     "build": "rimraf dist && webpack"
   },
   "dependencies": {
