@@ -5,7 +5,8 @@
   "main": "dist/react-atoms.js",
   "types": "dist/react-atoms.d.ts",
   "scripts": {
-    "postinstall": "rimraf dist && webpack"
+    "postinstall": "npm build",
+    "build": "rimraf dist && webpack"
   },
   "dependencies": {
     "@types/classnames": "^2.2.3",
@@ -14,6 +15,7 @@
     "classnames": "^2.2.5",
     "css-loader": "^0.28.9",
     "declaration-bundler-webpack-plugin": "^1.0.3",
+    "dts-bundle": "^0.7.3",
     "dtsbundler-webpack-plugin": "^1.0.0",
     "node-sass": "^4.7.2",
     "react": "^16.2.0",

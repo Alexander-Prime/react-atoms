@@ -1,6 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
-const DtsBundlerPlugin = require("dtsbundler-webpack-plugin");
+const DtsBundlePlugin = require("./tools/dts-bundle-plugin");
 
 module.exports = {
   entry: "./lib/index.ts",
@@ -44,5 +44,10 @@ module.exports = {
     libraryTarget: "umd",
   },
   externals: ["react", "classnames"],
-  plugins: [new DtsBundlerPlugin({ out: "react-atoms.d.ts" })],
+  plugins: [
+    new DtsBundlePlugin({
+      main: "dist/lib/index.d.ts",
+      out: "../react-atoms.d.ts",
+    }),
+  ],
 };
