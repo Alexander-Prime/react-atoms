@@ -2,10 +2,9 @@ import classNames from "classnames";
 import React from "react";
 
 import s from "./Icon.scss";
+import { AtomBaseAttributes } from "../common/types";
 
-type IconCommonAttributes = {
-  className?: string;
-};
+interface IconCommonAttributes extends AtomBaseAttributes {}
 
 interface IconNameAttributes extends IconCommonAttributes {
   name: string;
@@ -20,9 +19,13 @@ interface IconSrcAttributes extends IconCommonAttributes {
 const Icon = (props: IconNameAttributes | IconSrcAttributes) => {
   const className = classNames(s.icon, props.className);
   if (typeof props.name === "undefined") {
-    return <img className={className} src={props.src} />;
+    return <img className={className} style={props.style} src={props.src} />;
   } else {
-    return <span className={className}>{props.name}</span>;
+    return (
+      <span className={className} style={props.style}>
+        {props.name}
+      </span>
+    );
   }
 };
 
