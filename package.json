@@ -1,6 +1,6 @@
 {
   "name": "react-atoms",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "license": "MIT",
   "main": "dist/react-atoms.js",
   "types": "dist/react-atoms.d.ts",
