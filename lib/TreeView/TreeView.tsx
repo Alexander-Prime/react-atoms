@@ -3,7 +3,7 @@ import React from "react";
 
 import { AtomBaseAttributes } from "common/types";
 
-import s from "./TreeView.scss";
+import c from "./TreeView.scss";
 
 interface TreeViewAttributes<I> extends AtomBaseAttributes {
   render: (item: I) => JSX.Element | null;
@@ -13,9 +13,9 @@ interface TreeViewAttributes<I> extends AtomBaseAttributes {
 
 const TreeView = <I extends any>(props: TreeViewAttributes<I>) => {
   const { getChildren, getKey } = props;
-  const className = classnames(s.treeView, props.className);
+  const className = classnames(c.treeView, props.className);
   return (
-    <ul className={classnames("treeView", className)}>
+    <ul className={className} style={props.style}>
       {Array(...getChildren()).map(child => (
         <Item item={child} {...props} key={getKey(child)} />
       ))}
@@ -30,15 +30,15 @@ class Item<I> extends React.PureComponent<ItemProps<I>> {
     const { item, render, getChildren, getKey } = this.props;
     const children = Array(...getChildren(item));
     const childrenElem = children.length > 0 && (
-      <ul className="treeView-item-children">
+      <ul className={c["treeView-item-children"]}>
         {children.map(child => (
           <Item {...this.props} item={child} key={getKey(child)} />
         ))}
       </ul>
     );
     return (
-      <li className="treeView-item">
-        <span className="treeView-item-body">{render(item)}</span>
+      <li className={c["treeView-item"]}>
+        <span className={c["treeView-item-body"]}>{render(item)}</span>
         {childrenElem}
       </li>
     );
