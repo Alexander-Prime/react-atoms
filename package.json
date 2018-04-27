@@ -2,6 +2,7 @@
   "name": "react-atoms",
   "version": "0.2.0",
   "license": "MIT",
+  "repository": "github:Alexander-Prime/react-atoms",
   "main": "dist/react-atoms.js",
   "types": "dist/react-atoms.d.ts",
   "scripts": {
